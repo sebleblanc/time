@@ -11,6 +11,7 @@ module Data.Time.Format.Locale (
     )
 where
 
+import Data.Default
 import Data.Time.LocalTime.TimeZone
 
 
@@ -66,6 +67,9 @@ defaultTimeLocale =  TimeLocale {
             TimeZone (-7 * 60) True "PDT"
             ]
         }
+
+instance Default TimeLocale
+  where def = defaultTimeLocale
 
 {- | Construct format string according to <http://en.wikipedia.org/wiki/ISO_8601 ISO-8601>.
 

@@ -50,6 +50,7 @@ library
     ghc-options: -Wall -fwarn-tabs
     build-depends:
         base >= 4.7 && < 5,
+        data-default,
         deepseq >= 1.1
     if os(windows)
         build-depends: Win32
